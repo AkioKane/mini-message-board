@@ -6,18 +6,8 @@ const newMessageRouter = require("./routes/newMessageRouter");
 
 const app = express();
 
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date()
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date()
-  }
-];
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

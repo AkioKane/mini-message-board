@@ -3,9 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/index.css">
   <title>Message Board</title>
 </head>
 <body>
   
+  <div class="main">
+    <header class="head-container">
+      <h1><%= title %></h1>
+      <div class="black-line"></div>
+    </header>
+
+    <div class="message-container">
+      <div class="content">
+        <a href="/new">
+          <button class="add-message">New Message</button>
+        </a>
+        <% for (message of messages) { %>
+          <div class="item">
+            <h3><%= message.user %></h3>
+            <div class="bottom-case">
+              <p><%= message.text %></p>
+              <p>
+                <%= message.added.toLocaleDateString("ru-RU") %>
+                <%= message.added.toLocaleTimeString("ru-RU", { hour: '2-digit' , minute: '2-digit' }) %>
+              </p>
+            </div>
+            <hr>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
