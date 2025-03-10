@@ -8,17 +8,15 @@
   src: url("../fonts/Nunito/Nunito-VariableFont_wght.ttf");
 }
 
-:root {
-  --header-size: 80px;
-  --message-container-size: calc(100vh - var(--header-size));
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --header-size: 80px;
+}
 
 body {
   background: -webkit-linear-gradient(90deg, #bdbdbd,#dedede,#ffffff);
@@ -31,6 +29,15 @@ body {
   font-family: "Open Sans";
 }
 
+.black-line {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  color: black;
+  background-color: rgb(41, 20, 20);
+}
+
 .head-container {
   position: relative;
   display: flex;
@@ -41,70 +48,50 @@ body {
   height: var(--header-size);
 }
 
-.black-line {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  color: black;
-  background-color: rgb(41, 20, 20);
-}
-
-.message-container {
+.container-form {
   display: flex;
   justify-content: center;
-  min-height: var(--message-container-size);
   width: 100%;
 }
 
-.content {
-  display: block;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.item {
+form {
   display: flex;
   flex-direction: column;
-  margin: 2em;
 }
 
-.item:first-child() {
-  margin-top: 0;
+textarea {
+  resize: none;
 }
 
-.item h3, p {
-  margin-left: 10px;
-  margin-left: 10px;
+input, textarea {
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-.bottom-case {
-  display: flex;
-  justify-content: space-between;
+label, button {
+  margin-top: 1em;
+  margin-bottom: 0.1em;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.add-message {
+button {
   padding: 10px;
-  margin-left: 3em;
-  margin-top: 3em;
-  width: 150px;
   max-width: 1000px;
   border: 1px solid black;
   border-radius: 6px;
   color: black;
+  background-position: center;
   background: -webkit-linear-gradient(90deg, #ceddd6,#b9babf,#f1bfa4);background: linear-gradient(90deg, #ceddd6,#b9babf,#f1bfa4);
-  transition: width 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.add-message:hover {
-  width: 250px;
+button:hover {
+  padding: 15px;
 }
 
-.add-message:active {
+button:active {
   opacity: 0.5;
 }
