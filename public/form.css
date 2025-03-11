@@ -72,12 +72,13 @@ input, textarea {
   transition: all 0.3s ease-in-out;
 }
 
-label, button {
+label {
   margin-top: 1em;
   margin-bottom: 0.1em;
 }
 
-button {
+.btn-sumbit {
+  margin-top: 1.5em;
   padding: 10px;
   max-width: 1000px;
   border: 1px solid black;
@@ -88,10 +89,30 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-button:hover {
+.btn-sumbit:hover {
   padding: 15px;
 }
 
 button:active {
   opacity: 0.5;
+}
+
+.go-home {
+  position: absolute;
+  top: 0;
+  right: 5em;
+  margin-top: 1.5em;
+  padding: 10px;
+  max-width: 1000px;
+  border: 1px solid black;
+  border-radius: 6px;
+  color: black;
+  background-position: center;
+  background: -webkit-linear-gradient(90deg, #eae6ff,#f4f4f4);
+  background: linear-gradient(90deg, #eae6ff,#f4f4f4);
+  transition: all 0.3s ease-in-out;
+}
+
+.go-home:hover {
+  transform: scale(1.05);
 }
